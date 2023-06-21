@@ -1,0 +1,76 @@
+.d3-cube{
+    margin-top: 300px;
+    padding-bottom: 300px;
+    h2{
+        padding-bottom: 100px;
+    }
+}
+
+.d3-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+        &:hover{
+            animation-name: cube;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+
+.d3-box-parent{
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    position: absolute;
+    // transform: translateZ(-100px);
+}
+
+.d3-box{
+    width:198px;
+    height: 198px;
+    position: absolute;
+    background-color: rgb(127, 255, 212, 0.5);
+    line-height: 198px;
+    text-align: center;
+    border: 1px solid rgb(2, 32, 22);
+}
+
+.d3-box1{
+    transform: translateZ(100px);
+}
+
+.d3-box2{
+    transform:rotateY(180deg)  translateZ(100px) ;
+}
+
+.d3-box3{
+    transform: rotateY(90deg) translateZ(100px) ;
+}
+
+.d3-box4{
+    transform: rotateY(-90deg) translateZ(100px) ;
+}
+
+.d3-box5{
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.d3-box6{
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+.container-cube{
+    display: flex;
+    justify-content: center;
+}
+
+
+@keyframes cube{
+    0%{
+        transform: rotateY(360deg);
+    }
+}
